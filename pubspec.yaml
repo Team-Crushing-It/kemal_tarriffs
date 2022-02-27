@@ -13,11 +13,7 @@ dependencies:
   flutter_bloc: ^8.0.1
   flutter_localizations:
     sdk: flutter
-  intl: ^0.17.0
-  tariff_api:
-    path: packages/tariff_api
-  tariffs_repository:
-    path: packages/tariffs_repository
+
 
 
 dev_dependencies:

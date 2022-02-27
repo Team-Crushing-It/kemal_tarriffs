@@ -39,38 +39,38 @@ class CatalogPage extends StatelessWidget {
   }
 }
 
-class AddButton extends StatelessWidget {
-  const AddButton({Key? key, required this.item}) : super(key: key);
+// class AddButton extends StatelessWidget {
+//   const AddButton({Key? key, required this.item}) : super(key: key);
 
-  final Tariff item;
+//   final Tariff item;
 
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    return BlocBuilder<CalculatorBloc, CalculatorState>(
-      builder: (context, state) {
-        if (state is CalculatorLoading) {
-          return const CircularProgressIndicator();
-        }
-        if (state is CalculatorLoaded) {
-          final isInCalculator = state.calculator.items.contains(item);
-          return TextButton(
-            style: TextButton.styleFrom(onSurface: theme.primaryColor),
-            onPressed: isInCalculator
-                ? null
-                : () => context
-                    .read<CalculatorBloc>()
-                    .add(CalculatorItemAdded(item)),
-            child: isInCalculator
-                ? const Icon(Icons.check, semanticLabel: 'ADDED')
-                : const Text('ADD'),
-          );
-        }
-        return const Text('Something went wrong!');
-      },
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     final theme = Theme.of(context);
+//     return BlocBuilder<CalculatorBloc, CalculatorState>(
+//       builder: (context, state) {
+//         if (state is CalculatorLoading) {
+//           return const CircularProgressIndicator();
+//         }
+//         if (state is CalculatorLoaded) {
+//           final isInCalculator = state.calculator.items.contains(item);
+//           return TextButton(
+//             style: TextButton.styleFrom(onSurface: theme.primaryColor),
+//             onPressed: isInCalculator
+//                 ? null
+//                 : () => context
+//                     .read<CalculatorBloc>()
+//                     .add(CalculatorItemAdded(item)),
+//             child: isInCalculator
+//                 ? const Icon(Icons.check, semanticLabel: 'ADDED')
+//                 : const Text('ADD'),
+//           );
+//         }
+//         return const Text('Something went wrong!');
+//       },
+//     );
+//   }
+// }
 
 class CatalogAppBar extends StatelessWidget {
   @override
@@ -104,7 +104,7 @@ class CatalogListItem extends StatelessWidget {
           children: [
             Expanded(child: Text(item.ageCondition, style: textTheme)),
             const SizedBox(width: 24),
-            AddButton(item: item),
+            // AddButton(item: item),
           ],
         ),
       ),
