@@ -1,4 +1,4 @@
-part of 'cart_bloc.dart';
+part of 'calculator_bloc.dart';
 
 @immutable
 abstract class CalculatorState extends Equatable {
@@ -11,12 +11,12 @@ class CalculatorLoading extends CalculatorState {
 }
 
 class CalculatorLoaded extends CalculatorState {
-  const CalculatorLoaded({this.cart = const Calculator()});
+  const CalculatorLoaded({this.calculator = const Calculator()});
 
-  final Calculator cart;
+  final Calculator calculator;
 
   @override
-  List<Object> get props => [cart];
+  List<Object> get props => [calculator];
 }
 
 class CalculatorError extends CalculatorState {

@@ -42,7 +42,7 @@ class CatalogPage extends StatelessWidget {
 class AddButton extends StatelessWidget {
   const AddButton({Key? key, required this.item}) : super(key: key);
 
-  final Item item;
+  final Tariff item;
 
   @override
   Widget build(BuildContext context) {
@@ -91,7 +91,7 @@ class CatalogAppBar extends StatelessWidget {
 class CatalogListItem extends StatelessWidget {
   const CatalogListItem(this.item, {Key? key}) : super(key: key);
 
-  final Item item;
+  final Tariff item;
 
   @override
   Widget build(BuildContext context) {
@@ -102,9 +102,7 @@ class CatalogListItem extends StatelessWidget {
         maxHeight: 48,
         child: Row(
           children: [
-            AspectRatio(aspectRatio: 1, child: ColoredBox(color: item.color)),
-            const SizedBox(width: 24),
-            Expanded(child: Text(item.name, style: textTheme)),
+            Expanded(child: Text(item.ageCondition, style: textTheme)),
             const SizedBox(width: 24),
             AddButton(item: item),
           ],

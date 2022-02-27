@@ -1,4 +1,4 @@
-part of 'cart_bloc.dart';
+part of 'calculator_bloc.dart';
 
 @immutable
 abstract class CalculatorEvent extends Equatable {
