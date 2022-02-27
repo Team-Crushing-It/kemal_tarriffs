@@ -14,6 +14,11 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: ^0.17.0
+  tariff_api:
+    path: packages/tariff_api
+  tariffs_repository:
+    path: packages/tariffs_repository
+
 
 dev_dependencies:
   bloc_test: ^9.0.2
